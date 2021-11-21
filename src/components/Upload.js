@@ -9,7 +9,7 @@ function Upload() {
 
     console.log(process.env.REACT_APP_API_KEY)
 
-    const contract_address = "0xbf4987BD601b9B80C1b5269EE19F9ca81Ff7E27d";
+    const contract_address = "0x4306dce14cEd3B5Aac553C29Fa465322342707A4";
     const fileInputRef = useRef();
     const nameRef = useRef();
     const descriptionRef = useRef();
@@ -33,7 +33,7 @@ function Upload() {
     
             console.log("Mining...please wait.")
             console.log(nftTxn);
-            console.log(`Mined, see transaction: https://mumbai.polygonscan.com/tx/${nftTxn.hash}`);
+            console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
     
           } else {
             console.log("Ethereum object doesn't exist!");
