@@ -1,13 +1,14 @@
 import React, { useRef } from "react"
-import {api_key, test_api_key} from "../secrets";
 import { ethers } from "ethers";
 import abi from "../utils/abi.json";
 import {
-  FormControl, FormLabel, Input, Button, Container, Image
+  FormControl, FormLabel, Input, Button, Container
 } from "@chakra-ui/react"
-
+require('dotenv').config()
 
 function Upload() {
+
+    console.log(process.env.REACT_APP_API_KEY)
 
     const contract_address = "0xbf4987BD601b9B80C1b5269EE19F9ca81Ff7E27d";
     const fileInputRef = useRef();
@@ -56,7 +57,7 @@ function Upload() {
         method: "POST",
         body: formData,
         headers: {
-            'Authorization': 'Bearer '+test_api_key
+            'Authorization': 'Bearer '+process.env.api_key
         }
         })
         .then(response => response.json())
