@@ -56,7 +56,7 @@ function Upload() {
         method: "POST",
         body: formData,
         headers: {
-            'Authorization': 'Bearer '+process.env.api_key
+            'Authorization': 'Bearer '+process.env.REACT_APP_API_KEY
         }
         })
         .then(response => response.json())
