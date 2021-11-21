@@ -4,7 +4,6 @@ import abi from "../utils/abi.json";
 import {
   FormControl, FormLabel, Input, Button, Container
 } from "@chakra-ui/react"
-require('dotenv').config()
 
 function Upload() {
 
